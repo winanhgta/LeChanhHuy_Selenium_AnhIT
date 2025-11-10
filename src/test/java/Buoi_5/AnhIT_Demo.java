@@ -4,6 +4,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.testng.Assert;
 
 public class AnhIT_Demo {
     public static void main(String[] args) throws InterruptedException {
@@ -35,6 +36,16 @@ public class AnhIT_Demo {
 
         driver.findElement(By.xpath("//a[@href='/panel/setting']")).click();
         Thread.sleep(2000);
+
+        String currentEmail = driver.findElement(By.xpath("//input[@name='email']")).getAttribute("value");
+
+        if(email.equals(currentEmail)){
+            System.out.println("TC Pass");
+            }else{
+            System.out.println("TC Fail");
+            System.out.println(currentEmail);
+        }
+
 
         driver.findElement(By.xpath("//input[@type='tel']")).clear();
         driver.findElement(By.xpath("//input[@type='tel']")).sendKeys("0782747539");
