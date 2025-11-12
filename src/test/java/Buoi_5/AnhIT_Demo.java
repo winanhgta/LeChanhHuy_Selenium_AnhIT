@@ -56,6 +56,7 @@ public class AnhIT_Demo {
         driver.findElement(By.xpath("//a[contains(@href, '/panel/setting/step/3')]")).click();
         Thread.sleep(2000);
 
+        driver.findElement(By.xpath("//textarea[@name='about']")).clear();
         driver.findElement(By.xpath("//textarea[@name='about']")).sendKeys("Là một người từng mông lung trong việc tìm hiểu ngành nghề tester, AnhIT đã giúp tôi xác định và hướng dẫn các kiến thức cần thiết để trở thành một tester trong tương lai");
 
         driver.findElement(By.xpath("//button[@id='saveData']")).click();
