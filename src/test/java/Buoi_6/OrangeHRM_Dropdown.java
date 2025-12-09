@@ -15,6 +15,7 @@ public class OrangeHRM_Dropdown {
         driver.manage().window().maximize();
         driver.get("https://opensource-demo.orangehrmlive.com/web/index.php/auth/login");
         Thread.sleep(2000);
+
         // Đăng nhập vào trang với username và password
         driver.findElement(By.xpath("//input[@name='username']")).sendKeys("Admin");
         driver.findElement(By.xpath("//input[@name='password']")).sendKeys("admin123");
