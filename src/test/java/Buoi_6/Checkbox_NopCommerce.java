@@ -3,7 +3,7 @@ import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.support.ui.Select;
 import org.testng.Assert;
 import java.util.List;
@@ -11,14 +11,14 @@ import java.util.List;
 public class Checkbox_NopCommerce {
     public static void main(String[] args) throws InterruptedException {
         WebDriver driver;
-        WebDriverManager.chromedriver().setup();
-        driver = new ChromeDriver();
+        WebDriverManager.firefoxdriver().setup();
+        driver = new FirefoxDriver();
         driver.manage().window().maximize();
         driver.get("https://demo.nopcommerce.com/");
         Thread.sleep(2000);
 
         driver.findElement(By.xpath("//a[@class='ico-register']")).click();
-        Thread.sleep(2000);
+        Thread.sleep(20000);
 
         WebElement newLetterCheckBox = driver.findElement(By.xpath("//input[@type='checkbox']"));
 
